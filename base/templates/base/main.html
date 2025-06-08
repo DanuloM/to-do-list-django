@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="description"
-        content="This is to do list implemented using Django by Dennis Ivy who is a full stack web developer.">
+        content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>To Do Items</title>
@@ -17,8 +17,8 @@
     <style>
         body {
             background-color: #FAFAFA;
-            font-family: 'Nunito', sans-serif;
-            padding-top: 50px;
+            font-family: 'Arial', sans-serif;
+            padding-top: 40px;
         }
 
         h1,
@@ -26,9 +26,9 @@
         h3,
         h4,
         h5,
-        h6,
+        h6
             {
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         a,
@@ -40,8 +40,22 @@
             font-weight: 600;
         }
 
+        .greet{
+            height: auto;
+            color: #FFF;
+            font-size: 18px;
+            align-self: flex-end;
+            padding: 0;
+            margin-top: 0;
+            margin-left: auto;
+            margin-bottom: auto;
+        }
+
+        .form{
+            height: 30px;
+        }
         .container {
-            max-width: 550px;
+            max-width: 900px;
             margin: auto;
             background-color: #fff;
             -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
@@ -59,7 +73,7 @@
             color: #fff;
             padding: 10px;
             border-radius: 5px 5px 0 0;
-            background: linear-gradient(90deg, #EEA390 0%, #EB796F 43%, #EB796F 100%);
+            background: linear-gradient(90deg, #cf90ee 0%, #d06feb 43%, #eb6fd2 100%);
         }
 
         .header-bar a {
@@ -69,7 +83,7 @@
 
         .task-wrapper {
             display: flex;
-            align-items: center;
+            align-items: first baseline;
             justify-content: space-between;
             background-color: #fff;
             border-top: 1px solid #dfe4ea;
@@ -78,9 +92,17 @@
 
         .task-title {
             display: flex;
-            padding: 20px;
+            justify-content: flex-start;
+            padding: 10px 0 10px 10px;
+            margin: 0;
+            width: 93%;
         }
 
+        .task-controls{
+            width: 30px;
+            margin-right: 0;
+            justify-content: end;
+        }
         .task-title a {
             text-decoration: none;
             color: #4b5156;
@@ -104,7 +126,7 @@
         .delete-link {
             text-decoration: none;
             font-weight: 900;
-            color: #cf4949;
+            color: rgba(205, 53, 217, 0.84);
             font-size: 22px;
             line-height: 0;
             padding: 20px 0px;
@@ -113,15 +135,12 @@
         /*Handle Classes*/
 
         .handle {
-            display: inline-block;
-            padding: 20px 16px;
             cursor: grab;
             user-select: none;
         }
 
         .handle:after,
         .handle:before {
-            display: block;
             content: "";
         }
 
@@ -143,10 +162,13 @@
 
 
         #add-link {
-            color: #EB796F;
+            color: rgba(205, 53, 217, 0.84);
             text-decoration: none;
-            font-size: 42px;
-            text-shadow: 1px 1px #81413b;
+            border-radius: 5px;
+            border: 1px solid #757575;
+            background-color: #FFF;
+            padding: 10px 15px;
+            font-size: 14px;
         }
 
         #search-add-wrapper {
@@ -184,7 +206,19 @@
         .button {
             border: 1px solid #757575;
             background-color: #FFF;
-            color: #EB796F;
+            color: rgba(205, 53, 217, 0.84);
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        
+        .log_button {
+            border: 1px solid #757575;
+            background-color: #FFF;
+            color: rgba(205, 53, 217, 0.84);
             padding: 10px;
             font-size: 14px;
             border-radius: 5px;
@@ -192,6 +226,16 @@
             text-decoration: none;
         }
 
+        .logout_button{
+            border: 1px solid #757575;
+            background-color: #FFF;
+            font-size: 14px;
+            color: rgba(205, 53, 217, 0.84);
+            border-radius: 5px;
+            margin-left: 8px;
+            width: auto;
+        }
+        
         .card-body {
             padding: 20px;
         }
